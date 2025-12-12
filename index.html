@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Your Company Name</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; background: #f9f9f9; }
+        header { background: #0f4c81; color: white; padding: 30px; text-align: center; }
+        nav { background: #08375e; padding: 10px; text-align: center; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; }
+        section { padding: 40px; max-width: 900px; margin: auto; }
+        h2 { color: #0f4c81; }
+        .services { display: flex; gap: 20px; flex-wrap: wrap; }
+        .service-box {
+            background: white;
+            padding: 20px;
+            flex: 1 1 260px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        footer {
+            background: #08375e;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <h1>Your Company Name</h1>
+    <p>Professional solutions for your customers</p>
+</header>
+
+<nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
+    <h2>About Us</h2>
+    <p>
+        Welcome to <strong>Your Company Name</strong>. We specialize in providing high-quality
+        services tailored to meet the unique needs of each client. Our mission is to deliver
+        reliable, professional, and affordable solutions.
+    </p>
+</section>
+
+<section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+
+        <div class="service-box">
+            <h3>Service One</h3>
+            <p>Brief description of your service. Explain what makes it valuable.</p>
+        </div>
+
+        <div class="service-box">
+            <h3>Service Two</h3>
+            <p>Brief description of your service. Highlight your competitive advantage.</p>
+        </div>
+
+        <div class="service-box">
+            <h3>Service Three</h3>
+            <p>Describe another service. Keep it short and professional.</p>
+        </div>
+
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <p>Email: <strong>yourcompany@email.com</strong></p>
+    <p>Phone: <strong>(000) 000-0000</strong></p>
+    <p>Location: Your City, State</p>
+</section>
+
+<footer>
+    © <span id="year"></span> Your Company Name — All Rights Reserved
+</footer>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
