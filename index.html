@@ -13,32 +13,55 @@
     <meta property="og:url" content="https://YOURUSERNAME.github.io">
 
     <style>
+        /* Global Scaling */
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             background: #f9f9f9;
             color: #000;
+            font-size: 16px;
         }
 
+        img, iframe, video {
+            max-width: 100%;
+            height: auto;
+        }
+
+        section, header, nav, footer {
+            width: 90%;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* Header */
         header {
-    background: #0f4c81;
-    color: white;
-    padding: 30px;
-}
-    .header-content {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-    max-width: 900px;
-    margin: auto;
-}
+            background: #0f4c81;
+            color: white;
+            padding: 30px;
+        }
 
-    .logo {
-    max-width: 230px;
-    height: auto;
-    flex-shrink: 0; 
-}
+        .header-content {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
 
+        .logo {
+            max-width: 230px;
+            height: auto;
+            flex-shrink: 0;
+        }
+
+        header h1, header p {
+            margin: 0;
+        }
+
+        /* Navigation */
         nav {
             background: #08375e;
             padding: 10px;
@@ -52,10 +75,9 @@
             font-weight: bold;
         }
 
+        /* Sections */
         section {
-            padding: 40px;
-            max-width: 900px;
-            margin: auto;
+            padding: 40px 10px;
             color: #000;
         }
 
@@ -73,11 +95,13 @@
             background: white;
             padding: 20px;
             flex: 1 1 260px;
+            min-width: 220px;
             border-radius: 8px;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             color: #000;
         }
 
+        /* Footer */
         footer {
             background: #08375e;
             color: white;
@@ -86,10 +110,57 @@
             margin-top: 40px;
         }
 
-        .logo {
-            display: block;
-            margin: 0 auto 5px auto;
-            max-width: 230px;
+        /* Contact button */
+        .contact-button {
+            display: inline-block;
+            background-color: #0f4c81;
+            color: white;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+
+            nav a {
+                display: block;
+                margin: 5px 0;
+            }
+
+            .services {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            .logo {
+                max-width: 180px;
+                margin-bottom: 10px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            body {
+                font-size: 14px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+
+            h3 {
+                font-size: 18px;
+            }
+
+            .logo {
+                max-width: 140px;
+            }
         }
     </style>
 </head>
@@ -159,19 +230,19 @@
 <section id="contact">
     <h2>Contact</h2>
     <p>Email: sqspacesolutions@gmail.com</p>
-    <p>or fill out our contact form by clicking the link below:</p></p>
+    <p>or fill out our contact form by clicking the link below:</p>
 
     <p style="text-align: center; margin-top: 20px;">
-        <a href="https://docs.google.com/forms/d/1K_rNoBlvNOV6L9vyGJagG0uCt7D-kW2DNmm7G4LN-wA/edit" 
-           style="display: inline-block; background-color: #0f4c81; color: white; 
-                  padding: 12px 24px; border-radius: 6px; text-decoration: none; font-weight: bold;">
+        <a href="https://docs.google.com/forms/d/1K_rNoBlvNOV6L9vyGJagG0uCt7D-kW2DNmm7G4LN-wA/viewform?usp=sf_link" 
+           target="_blank"
+           class="contact-button">
             Open Contact Form
         </a>
     </p>
 </section>
 
 <footer>
-    © <span id="2026"></span> SqSpace Solutions LLC
+    © <span id="year"></span> SqSpace Solutions LLC
 </footer>
 
 <script>
