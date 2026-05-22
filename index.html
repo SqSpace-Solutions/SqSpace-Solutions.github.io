@@ -17,7 +17,45 @@
         * {
             box-sizing: border-box;
         }
+/* About section layout */
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
 
+.about-text {
+    flex: 1 1 500px;
+}
+
+.about-image {
+    flex: 1 1 300px;
+    text-align: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .about-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .about-text {
+        order: 2;
+    }
+
+    .about-image {
+        order: 1;
+    }
+}
         body {
             font-family: Arial, sans-serif;
             margin: 0;
@@ -188,13 +226,26 @@
 
 <section id="about">
     <h2>About Us</h2>
-    <p>
-        Welcome to <strong>SqSpace Solutions LLC</strong>, a scientific consulting practice specializing in manuscript editing, experimental 
-        strategy feedback, scientific content development, and biotech project management. Led by a biology-trained professional with experience 
-        in academic, government, and industry laboratories, we support life sciences teams in improving scientific rigor, communication clarity, 
-        and operational efficiency. Our work focuses on translating complex biological and technical requirements into structured, scalable workflows 
-        that enable high-quality research and effective execution.
-    </p>
+
+    <div class="about-container">
+
+        <!-- LEFT SIDE: TEXT -->
+        <div class="about-text">
+            <p>
+                Welcome to <strong>SqSpace Solutions LLC</strong>, a scientific consulting practice specializing in manuscript editing, experimental 
+                strategy feedback, scientific content development, and biotech project management. Led by a biology-trained professional with experience 
+                in academic, government, and industry laboratories, we support life sciences teams in improving scientific rigor, communication clarity, 
+                and operational efficiency. Our work focuses on translating complex biological and technical requirements into structured, scalable workflows 
+                that enable high-quality research and effective execution.
+            </p>
+        </div>
+
+        <!-- RIGHT SIDE: IMAGE -->
+        <div class="about-image">
+            <img src="Personal Picture.png" alt="Scientific consulting">
+        </div>
+
+    </div>
 </section>
 
 <section id="services">
